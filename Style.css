@@ -1,0 +1,429 @@
+/* =================================
+   DEVARAJ CSC - MODERN WEBSITE STYLE
+   Colors: Deep Teal, Emerald & Gold
+================================= */
+
+:root {
+  --primary: #103c3a;
+  --secondary: #176b61;
+  --green: #21966f;
+  --gold: #e9bd59;
+  --gold-dark: #c9952f;
+  --cream: #f8f8f2;
+  --white: #ffffff;
+  --text: #243b39;
+  --muted: #667875;
+  --border: #dce9e3;
+  --shadow: 0 8px 25px rgba(16, 60, 58, 0.10);
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+body {
+  font-family: "Noto Sans Devanagari",
+               "Mukta",
+               Arial,
+               sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+  color: var(--white);
+  text-align: center;
+  padding: 24px 15px 18px;
+  border-bottom: 4px solid var(--gold);
+}
+
+header h2 {
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+
+header p {
+  color: #e4f4ee;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 13px;
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: 0.25s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background: var(--gold);
+  color: var(--primary);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 65px 20px;
+  color: var(--white);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(233,189,89,0.24),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #103c3a,
+      #176b61,
+      #21966f
+    );
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: clamp(27px, 5vw, 42px);
+  line-height: 1.45;
+  margin-bottom: 14px;
+  font-weight: 800;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 8px auto;
+  color: #eaf7f0;
+  font-size: 17px;
+}
+
+.hero .btn {
+  margin-top: 20px;
+}
+
+/* GENERAL SECTIONS */
+section {
+  padding: 45px 6%;
+}
+
+section > h2,
+.about h2,
+.contact h2 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 27px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+section > p {
+  margin-bottom: 12px;
+}
+
+/* SERVICE GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 23px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SERVICE CARDS */
+.card,
+.grid > a {
+  display: block;
+  background: var(--white);
+  color: var(--text);
+  padding: 25px 22px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  border-bottom: 4px solid var(--gold);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card:hover,
+.grid > a:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 32px rgba(16, 60, 58, 0.16);
+  border-bottom-color: var(--green);
+}
+
+.card h3,
+.grid > a h3 {
+  color: var(--primary);
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+.card p,
+.grid > a p {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 8px 0;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  background: linear-gradient(
+    135deg,
+    var(--gold),
+    #f5d782
+  );
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 11px 22px;
+  margin-top: 12px;
+  border-radius: 30px;
+  border: 1px solid rgba(201,149,47,0.3);
+  box-shadow: 0 5px 12px rgba(201,149,47,0.15);
+  transition: 0.25s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ABOUT SECTION */
+.about {
+  background: #edf5ef;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.about p {
+  max-width: 850px;
+  margin: 10px auto;
+}
+
+/* CONTACT SECTION */
+.contact {
+  text-align: center;
+  background: var(--white);
+}
+
+.contact .card {
+  max-width: 650px;
+  margin: 18px auto;
+}
+
+.contact p {
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+
+/* CHECKLISTS AND INSTRUCTIONS */
+ul,
+ol {
+  max-width: 850px;
+  margin: 15px auto 20px;
+  padding: 22px 45px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(16,60,58,0.05);
+  text-align: left;
+}
+
+li {
+  padding: 5px 0;
+  line-height: 1.8;
+}
+
+li::marker {
+  color: var(--green);
+  font-weight: bold;
+}
+
+/* IMPORTANT NOTES */
+strong {
+  color: var(--primary);
+}
+
+/* FOOTER */
+footer {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 25px 15px;
+  border-top: 4px solid var(--gold);
+  font-size: 14px;
+}
+
+footer p {
+  margin: 5px 0;
+  color: #e1eee8;
+}
+
+footer a {
+  display: inline-block;
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+footer a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+/* LINKS INSIDE CONTENT */
+section a:not(.btn) {
+  overflow-wrap: anywhere;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  section {
+    padding: 38px 4%;
+  }
+
+  header h2 {
+    font-size: 26px;
+  }
+}
+
+/* MOBILE PHONES */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  header {
+    padding: 20px 10px 15px;
+  }
+
+  header h2 {
+    font-size: 24px;
+  }
+
+  nav {
+    gap: 6px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+
+  .hero {
+    padding: 45px 16px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  section {
+    padding: 32px 16px;
+  }
+
+  section > h2,
+  .about h2,
+  .contact h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card,
+  .grid > a {
+    padding: 22px 17px;
+    border-radius: 15px;
+  }
+
+  .card h3,
+  .grid > a h3 {
+    font-size: 19px;
+  }
+
+  .btn {
+    padding: 10px 19px;
+    font-size: 14px;
+  }
+
+  ul,
+  ol {
+    padding: 18px 30px;
+  }
+
+  footer {
+    padding: 22px 12px;
+  }
+}
+
+/* REDUCE ANIMATION IF REQUESTED BY DEVICE */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    transform: none !important;
+  }
+}
